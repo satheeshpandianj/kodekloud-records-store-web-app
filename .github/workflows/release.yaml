@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-git add .github/workflows/release.yaml
+
   workflow_dispatch:
     inputs:
       environment:
@@ -24,10 +24,10 @@ git add .github/workflows/release.yaml
 
 # Step 4: Apply least privilege permissions  
 # 👇 Uncomment in Step 4: Secure Authentication
-# permissions:
-#   contents: read      # Can read repository
-#   packages: write     # Can push Docker images
-#   id-token: write     # Can authenticate with cloud
+permissions:
+  contents: read      # Can read repository
+  packages: write     # Can push Docker images
+  id-token: write     # Can authenticate with cloud
 
 jobs:
   # Stage 1: Configuration Validation (ALWAYS RUNS FIRST)
